@@ -6,6 +6,7 @@ Save the screen light settings at shutdown and restore it at boot time, using Op
 # Installation
 ### Arch Linux Based
 1. Install the package using the [AUR tar ball](https://aur.archlinux.org/404)
+
 ### Non Arch Linux Based
 1. Clone this repo
 2. Copy the file **backlight** in */etc/init.d/*
