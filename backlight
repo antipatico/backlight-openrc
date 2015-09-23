@@ -1,0 +1,32 @@
+#!/usr/bin/openrc-run
+# created by jacopo@autistici.org
+# with this software you have no kind of support.
+#
+# copyleft (c) 2015
+
+start() {
+    ebegin 'Restoring the screen brightness'
+    
+    for card in `basename $(find /sys/class/backlight/ -type l)`; do
+        if [[ -r "/var/cache/backlight/$card-brightness-old" ]]; then
+            cp "/var/cache/backlight/$card-brightness-old" "/sys/class/backlight/$card/brightness"
+        fi
+    done
+
+    eend $?
+}
+
+stop() {
+    ebegin 'Saving the screen brightness'
+    if ! [[ -d '/var/cache/backlight/' ]]; then
+        mkdir '/var/cache/backlight'
+    fi
+    if ! [[ -w '/var/cache/backlight/' ]]; then
+        chmod 755 '/var/cache/backlight/'
+    fi
+    
+    for card in `basename $(find /sys/class/backlight/ -type l)`; do
+        cp "/sys/class/backlight/$card/brightness" "/var/cache/backlight/$card-brightness-old"
+    done
+    eend $?
+}
