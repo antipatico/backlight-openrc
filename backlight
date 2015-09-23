@@ -5,7 +5,7 @@
 # copyleft (c) 2015
 
 depend() {
-    xdm
+    need xdm
 }
 
 start() {
