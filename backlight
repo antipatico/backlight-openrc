@@ -4,6 +4,10 @@
 #
 # copyleft (c) 2015
 
+depend() {
+    xdm
+}
+
 start() {
     ebegin 'Restoring the screen brightness'
     

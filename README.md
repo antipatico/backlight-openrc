@@ -14,7 +14,7 @@ Save the screen light settings at shutdown and restore it at boot time, using Op
 
 # Setup
 After installing you should add the service to the system boot schedule with
-`# rc-update add backlight boot`
+`# rc-update add backlight`
 
 # How-to uninstall
 ### Arch Linux Based
