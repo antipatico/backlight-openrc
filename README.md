@@ -18,11 +18,9 @@ After installing you should add the service to the system boot schedule with
 `# rc-update add backlight boot`
 
 # How-to uninstall
-First remove the service from the startup with
-`# rc-update del backlight boot`
 ### Arch Linux Based
-Just run
-`# pacman -Rs backlight-openrc`
+1. `# pacman -Rs backlight-openrc`
+
 ### Non Arch Linux Based
-Just run
-`# rm /etc/init.d/backlight`
+1. `# rm /etc/init.d/backlight`
+2. `# rc-update del backlight boot`
