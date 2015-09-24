@@ -4,10 +4,6 @@
 #
 # copyleft (c) 2015
 
-depend() {
-    need xdm
-}
-
 start() {
     ebegin 'Restoring the screen brightness'
     
