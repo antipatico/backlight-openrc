@@ -10,19 +10,29 @@ Save the screen light settings at shutdown and restore it at boot time, using Op
 ### Non Arch Linux Based
 1. Clone this repo
 2. Install the file **backlight** in */etc/init.d/* with
-`# install -m=755 -o=root:root backlight /init.d/backlight`
+```bash
+install -m=755 -o=root:root backlight /init.d/backlight
+```
 
 # Setup
 After installing you should add the service to the system boot schedule with
-`# rc-update add backlight`
+```bash
+rc-update add backlight
+```
 
 # How-to uninstall
 ### Arch Linux Based
 1. Just remove it with pacman
-`# pacman -Rs backlight-openrc`
+```bash
+pacman -R backlight-openrc
+```
 
 ### Non Arch Linux Based
 1. First remove it from the system startup
-`# rc-update del backlight -a`
+```bash
+rc-update del backlight -a
+```
 2. Then just delete the script from your system
-`# rm /etc/init.d/backlight`
+```bash
+ rm /etc/init.d/backlight
+```
