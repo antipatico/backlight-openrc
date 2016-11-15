@@ -11,7 +11,7 @@ Save the screen light settings at shutdown and restore it at boot time, using Op
 1. Clone this repo
 2. Install the file **backlight** in */etc/init.d/* with
 ```bash
-install -m=755 -o=root:root backlight /init.d/backlight
+install -m=755 -oroot backlight /etc/init.d/backlight
 ```
 
 # Setup
